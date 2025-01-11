@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* :root {
+  --background: #ffffff;
+  --foreground: #171717;
+} */
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.w-topbar {
+  @apply flex flex-wrap flex-col sm:flex-row gap-2 mt-2 items-stretch;
+}
+
+.group-btn {
+  @apply flex gap-4 items-center justify-between h-full lg:mt-5  w-full sm:w-auto text-sm;
+}
+
+.btn-submit {
+  @apply w-full sm:w-auto px-6 py-2 mt-1 bg-green-500 text-white text-base font-medium rounded-lg shadow-md flex items-center justify-center transition-all duration-300 ease-in-out hover:bg-green-700 hover:shadow-lg;
+}
+
+.btn-reset {
+  @apply w-full sm:w-auto px-6 py-2 mt-1 bg-gray-200 text-gray-700 text-base font-medium rounded-lg shadow-md flex items-center justify-center gap-2 transition-all duration-300 ease-in-out hover:bg-gray-300 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-gray-400;
+}
+
+.btn-submit .fa-spinner {
+  @apply animate-spin;
+}
